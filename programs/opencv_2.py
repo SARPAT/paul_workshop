@@ -8,7 +8,7 @@ cam.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 cam.set(cv2.CAP_PROP_FRAME_HEIGHT,height)
 cam.set(cv2.CAP_PROP_FPS, 30)
 cam.set(cv2.CAP_PROP_FOURCC,cv2.VideoWriter_fourcc(*'MJPG'))
-
+#using face cascades 
 faceCascade=cv2.CascadeClassifier('/home/patel/Documents/paul_ai/haar/haarcascade_frontalface_default.xml')
 
 while True:

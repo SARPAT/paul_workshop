@@ -24,23 +24,25 @@ while True:
     if results.multi_hand_landmarks !=None :
         for handLandMarks in results.multi_hand_landmarks: 
             myHand=[]
-            #mpDraw.draw_landmarks(frame,handLandMarks,mp.solutions.hands.HAND_CONNECTIONS) #draw handlandmarks
+            mpDraw.draw_landmarks(frame,handLandMarks,mp.solutions.hands.HAND_CONNECTIONS) #draw handlandmarks
             for Landmark in handLandMarks.landmark:
                myHand.append((int(Landmark.x*width),int(Landmark.y*height)))
             #print(' ') 
             #print(myHand) 
             cv2.circle(frame,myHand[17],10,(125,255,0),-1) 
-            cv2.circle(frame,myHand[18],10,(125,255,0),-1)
-            cv2.circle(frame,myHand[19],10,(125,255,0),-1)
-            cv2.circle(frame,myHand[20],10,(125,255,0),-1) 
+            #cv2.circle(frame,myHand[18],10,(125,255,0),-1)
+            #cv2.circle(frame,myHand[19],10,(125,255,0),-1)
+            #cv2.circle(frame,myHand[20],10,(125,255,0),-1) 
+            
             
 
-            #myHands.append(myHand)
-            #print(myHands)
-            #print(' ')
+            myHands.append(myHand)
+            print(myHands)
+            print(' ')
 
     cv2.imshow('my WEBcam', frame) 
     cv2.moveWindow('my WEBcam',0,0)
     if cv2.waitKey(1) & 0xff ==ord('q'):
         break
 cam.release()
+

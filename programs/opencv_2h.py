@@ -42,11 +42,9 @@ while True:
 
     for reye in reyes:
         x,y,w,h=reye
-        test=cv2.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),2)
+        cv2.rectangle(frame,(x,y),(x+w,y+h),(0,0,255),2)
         cv2.putText(frame,mytext2,(x-w,y),myfont,fontH,(0,0,0),fontT)
-        for count in test:
-            if count==1:
-                break
+       
         
 
     '''for smile in smile:
